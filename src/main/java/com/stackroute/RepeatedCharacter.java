@@ -17,7 +17,7 @@ public class RepeatedCharacter {
 		 * repeated characters or is empty
 		 */
     	Scanner sc = new Scanner(System.in);
-    	String str = sc.next();
+    	String str = sc.nextLine();
     	Character character = findRepeatedCharacter(str);
     	if(character.equals('0')) {
     		System.out.println("No characters repeated");
@@ -30,7 +30,7 @@ public class RepeatedCharacter {
 	}
 
 	public static Character findRepeatedCharacter(String input) {
-		if(input != null && ! input.isEmpty()) {
+		if(input != null  && input.trim() != "") {
 			char [] charArr = input.toCharArray();
 			Map<Character, Integer> charMap = new TreeMap<Character, Integer>();
 			for (int i = 0; i < charArr.length; i++) {
