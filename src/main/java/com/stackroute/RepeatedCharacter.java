@@ -49,6 +49,9 @@ public class RepeatedCharacter {
 				}
 				
 			}
+			if(repeatedEntry.getValue() == 0) {
+				return '0';
+			}
 			return repeatedEntry.getKey();
 		}
 		return '0';
