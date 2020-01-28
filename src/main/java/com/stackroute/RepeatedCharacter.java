@@ -49,10 +49,12 @@ public class RepeatedCharacter {
 				}
 				
 			}
-			if(repeatedEntry.getValue() == 0) {
+			if(repeatedEntry.getValue() == 0 || repeatedEntry.getValue() == 1) {
 				return '0';
+			}else {
+				return repeatedEntry.getKey();
 			}
-			return repeatedEntry.getKey();
+			
 		}
 		return '0';
 	}
